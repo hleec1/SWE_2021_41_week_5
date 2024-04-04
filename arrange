@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for files in */"$files"/*; do
+	firstletter=${files:6:1}
+	firstletter=${firstletter,,}
+	destination=$firstletter
+	mv "$files" "$destination"
+done
